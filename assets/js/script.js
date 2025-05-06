@@ -631,3 +631,57 @@
     });
 
 })(window.jQuery);
+
+/* PROYECTOS*/ 
+// Manejador general para todos los dropdowns
+document.querySelectorAll(".dropdown-toggle").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const parent = button.parentElement;
+      parent.classList.toggle("open");
+  
+      // Cierra los otros dropdowns
+      document.querySelectorAll(".filtro-dropdown").forEach((dropdown) => {
+        if (dropdown !== parent) {
+          dropdown.classList.remove("open");
+        }
+      });
+    });
+  });
+  
+  // Cierra todo al hacer clic fuera
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".filtro-dropdown").forEach((dropdown) => {
+      dropdown.classList.remove("open");
+    });
+  });
+  
+  // FUNCIONALIDAD DE FILTRO EN PROYECTOS // 
+  function aplicarFiltros() {
+    const proyectos = document.querySelectorAll('.proyecto');
+    const filtrosDistrito = [...document.querySelectorAll('.filtro-dropdown input[value][type="checkbox"]:checked')].filter(el => el.closest('.filtro-dropdown').querySelector('button').textContent.includes('Distritos')).map(el => el.value);
+    const filtrosEtapa = [...document.querySelectorAll('.filtro-dropdown input[value][type="checkbox"]:checked')].filter(el => el.closest('.filtro-dropdown').querySelector('button').textContent.includes('Etapas')).map(el => el.value);
+  
+    proyectos.forEach(proyecto => {
+      const distrito = proyecto.dataset.distrito;
+      const etapa = proyecto.dataset.etapa;
+  
+      const coincideDistrito = filtrosDistrito.length === 0 || filtrosDistrito.includes(distrito);
+      const coincideEtapa = filtrosEtapa.length === 0 || filtrosEtapa.includes(etapa);
+  
+      if (coincideDistrito && coincideEtapa) {
+        proyecto.style.display = 'block';
+      } else {
+        proyecto.style.display = 'none';
+      }
+    });
+  }
+  
+  // Detectar cambio en los checkboxes
+  document.querySelectorAll('.filtro-dropdown input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', aplicarFiltros);
+  });
+  
+  // Opcional: aplicar filtros al cargar
+  document.addEventListener('DOMContentLoaded', aplicarFiltros);
+  

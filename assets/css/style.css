@@ -15,7 +15,7 @@ Version:        1.0.0
 #0.8	about-us-section
 #0.9	services-section
 #1.0	contact-section
-#1.1	cta-section
+#1.1	cta-section // SECCIONES CSS 
 #1.2	latest-projects-section
 #1.3	why-choose-us-section
 #1.4	team-section
@@ -98,7 +98,7 @@ body {
   background-color: #dbd8d8; /* color de fondo de pagina*/
   font-size: 15px;
   font-size: 1rem;
-  color: #ffffff; /*color de texto en topbar*/
+  color: #000000; /*color de texto en topbar*/
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -210,7 +210,7 @@ img {
 }
 
 .contact-validation-active label.error {
-  color: rgb(166, 255, 0); /*color error en contacto form*/
+  color: rgb(255, 0, 0); /*color error en contacto form*/
   font-size: 0.93333rem;
   font-weight: normal;
   margin: 5px 0 0 0;
@@ -235,7 +235,7 @@ img {
 .contact-validation-active #success,
 .contact-validation-active #error {
   width: 100%;
-  color: #fff;
+  color: #ff0202;
   padding: 5px 10px;
   font-size: 16px;
   text-align: center;
@@ -1291,8 +1291,8 @@ img {
 .service-sidebar .service-list-widget ul {
   font-family: "Barlow Condensed", sans-serif;
   list-style: none;
-  border-bottom: 0;
-  border: 4px solid #f1f5f7;
+  border-bottom: none;
+  border: 4px solid #f7f1f1;
 }
 
 .service-sidebar .service-list-widget ul li {
@@ -1875,6 +1875,18 @@ img {
   /*** navigation ***/
   /*** search-contact ***/
 }
+.social-icon {/*iconos png de redes sociales*/
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: opacity 0.3s ease;
+  filter: brightness(100); /* Asegura que el blanco sea visible */
+}
+
+.social a:hover .social-icon {
+  opacity: 0.7;
+}
 
 .header-style-1 .container-fluid, .header-style-2 .container-fluid {
   padding: 0 45px;
@@ -1892,7 +1904,7 @@ img {
 }
 
 .header-style-1 .topbar, .header-style-2 .topbar {
-  background-color: #265aa6; /*color de la barra top*/
+  background-color: #dde1e7; /*color de la barra top*/
 }
 
 .header-style-1 .topbar ul li, .header-style-2 .topbar ul li {
@@ -1945,13 +1957,13 @@ img {
 .header-style-1 .contact-info ul li i, .header-style-2 .contact-info ul li i {
   display: inline-block;
   padding-right: 5px;
-  color: #ffffff;  /* COLOR DE ICON PRIMERA BARRA */
+  color: #000000;  /* COLOR DE ICON PRIMERA BARRA */
 }
 
 .header-style-1 .contact-info ul > li + li, .header-style-2 .contact-info ul > li + li {
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 1px solid #ececec;
+  border-left: 1px solid #000000;/*lineas blancas en topbar azul*/
 }
 
 @media (max-width: 767px) {
@@ -1983,17 +1995,17 @@ img {
 
 .header-style-1 .social ul li, .header-style-2 .social ul li {
   padding: 10px;
-  border-left: 1px solid #ececec;
+  border-left: none; /*lineas blancas en topbar azul*/
 }
 
 .header-style-1 .social ul > li + li:last-child, .header-style-2 .social ul > li + li:last-child {
-  border-right: 1px solid #ececec;
+  border-right: none;/*lineas blancas en topbar azul*/
 }
 
 .header-style-1 .social a, .header-style-2 .social a {
   font-size: 13px;
   font-size: 0.86667rem;
-  color: #ffffff;  /* COLOR DE LOS LOGOS RRSS PRIMERA BARRA */
+  color: #000000;  /* COLOR DE LOS LOGOS RRSS TOPBAR */
 }
 
 .header-style-1 .social a:hover, .header-style-2 .social a:hover {
@@ -2007,7 +2019,7 @@ img {
   }
   .header-style-1 .social ul, .header-style-2 .social ul {
     display: inline-block;
-    border: 1px solid #ececec;
+    border: 1px solid #000000;
     margin-top: 15px;
   }
   .header-style-1 .social ul li, .header-style-2 .social ul li {
@@ -2124,7 +2136,7 @@ img {
 .header-style-1 .search-contact .fi, .header-style-2 .search-contact .fi {
   font-size: 30px;
   font-size: 2rem;
-  color: #fff;
+  color: #ffff;
 }
 
 .header-style-1 .search-contact > div, .header-style-2 .search-contact > div {
@@ -2208,7 +2220,7 @@ img {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
-  color: #fff;
+  color: #ffff;
 }
 
 @media (max-width: 991px) {
@@ -3491,82 +3503,175 @@ img {
 }
 
 /*--------------------------------------------------------------
-#1.1	cta-section
+#1.1	SECCIONES CSS
 --------------------------------------------------------------*/
-.cta-section {
-  background: url("../images/cta-bg.jpg") center top/cover no-repeat local;
-  position: relative;
-  padding: 150px 0 138px;
+/*--------------------------------------------------------------
+# Tekton Section
+--------------------------------------------------------------*/
+.tekton-section {
+  background-color: #265aa6; /* Azul Tekton */
+  color: white;
   text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-width: 991px) {
-  .cta-section {
-    padding: 100px 0;
+.tekton-section h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  display: inline-block;
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  color: #ffffff;
+}
+
+.tekton-section p {
+  font-size: 18px;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+  color: #ffffff;
+}
+
+.tekton-section .animated-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1.8s ease forwards;
+}
+
+.tekton-section .animated-btn:hover {
+  background-color: white;
+  color: #265aa6;
+  transform: scale(1.05);
+}
+
+/* Reutilizable fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 767px) {
-  .cta-section {
-    padding: 80px 0;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tekton-section h2 {
+    font-size: 36px;
+  }
+
+  .tekton-section p {
+    font-size: 16px;
+  }
+
+  .tekton-section .animated-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+/*--------------------------------------------------------------
+# Entregados Section
+--------------------------------------------------------------*/
+.entregados-section {
+  background-color: #1a1a1a; /* Gris oscuro para contrastar con Tekton */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.entregados-section h2 {
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  display: inline-block;
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  color: #ffffff;
+}
+
+.entregados-section p {
+  font-size: 18px;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+  color: #ffffff;
+}
+
+.entregados-section .animated-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1.8s ease forwards;
+}
+
+.entregados-section .animated-btn:hover {
+  background-color: white;
+  color: #1a1a1a; /*COLOR DEL TEXTO BOTON AL PASAR EL MOUSE*/
+  transform: scale(1.05);
+}
+
+/* Reaprovechamos la animación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.cta-section:before {
-  content: "";
-  background-color: rgba(2, 13, 38, 0.68);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .entregados-section h2 {
+    font-size: 34px;
+  }
 
-.cta-section .fi:before {
-  font-size: 100px;
-  font-size: 6.66667rem;
-  color: #fff;
-  margin-top: -0.2em;
-  display: block;
-  background: -webkit-linear-gradient(#265aa6, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .entregados-section p {
+    font-size: 16px;
+  }
 
-@media (max-width: 991px) {
-  .cta-section .fi:before {
-    font-size: 80px;
-    font-size: 5.33333rem;
+  .entregados-section .animated-btn {
+    padding: 10px 24px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 767px) {
-  .cta-section .fi:before {
-    font-size: 60px;
-    font-size: 4rem;
-  }
-}
-
-.cta-section h2 {
-  font-size: 60px;
-  font-size: 4rem;
-  color: #fff;
-  margin: 0.5em 0 0;
-}
-
-@media (max-width: 991px) {
-  .cta-section h2 {
-    font-size: 40px;
-    font-size: 2.66667rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .cta-section h2 {
-    font-size: 35px;
-    font-size: 2.33333rem;
-  }
-}
 
 /*--------------------------------------------------------------
 #1.2	latest-projects-section
@@ -4427,6 +4532,24 @@ img {
   .features-section-s2 {
     margin: 80px 0;
   }
+}
+.feature-grids .grid {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-grids .img-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* ajusta según el tamaño de los íconos */
+  margin-bottom: 15px;
+}
+
+.feature-grids .img-holder img {
+  max-height: 80px;
+  max-width: 100%;
+  height: auto;
 }
 
 /*--------------------------------------------------------------
@@ -7002,32 +7125,229 @@ img {
 
 /*# sourceMappingURL=style.css.map */
 
-/*css videos responsive */
-.slide-video {
+/* Ocultar características en móviles */
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+/* CSS PARA SECION PROYECTOS */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+.proyectos {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.filtros {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.filtro, .filtro-distritos {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.checkboxes input {
+  margin-right: 8px;
+}
+
+select {
+  padding: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  appearance: none;
+}
+
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.proyecto {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+}
+
+.proyecto img {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.filtro-dropdown {
   position: relative;
-  width: 100%;
-  height: calc(100vh - 60px);
-  overflow: hidden;
+  font-size: 14px;
 }
 
-.video-slide {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+.dropdown-toggle {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.video-mobile {
+.dropdown-content {
   display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  z-index: 10;
+  min-width: 150px;
+  flex-direction: column;
 }
 
-@media (max-width: 768px) {
-  .video-desktop {
-    display: none;
-  }
-  .video-mobile {
-    display: block;
-  }
+.dropdown-content label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.filtro-dropdown.open .dropdown-content {
+  display: flex;
+}
+.filtros {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.filtro-dropdown {
+  position: relative;
+  font-size: 14px;
+  min-width: 160px;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-toggle::after {
+  content: "▾";
+  float: right;
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  z-index: 10;
+  min-width: 100%;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+
+.dropdown-content label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.filtro-dropdown.open .dropdown-content {
+  display: flex;
+}
+/* Navbar fijo con fondo azul Tekton */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #265aa6 !important; /* Azul Tekton */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* Ajuste solo para la sección de nosotros en esta página */
+.page-nosotros #nosotros {
+  margin-top: 180px; /* Ajusta según la altura real del topbar + navbar */
+}
+
+ /* Ajusta de galeria en ENTREGADOS */
+.timeline-gallery {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.timeline-gallery .year-block {
+  margin-bottom: 60px;
+}
+
+.timeline-gallery h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #004aad;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  flex: 1 1 calc(25% - 20px); /* 4 columnas */
+  min-width: 250px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body.page-entregados .gallery-wrapper {
+  padding-top: 140px; /* Ajusta según el alto real de topbar + navbar */
 }
