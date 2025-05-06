@@ -1055,8 +1055,7 @@ img {
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
+} 
 .blog-sidebar .category-widget ul {
   list-style: none;
 }
@@ -7304,50 +7303,177 @@ select {
   margin-top: 180px; /* Ajusta según la altura real del topbar + navbar */
 }
 
- /* Ajusta de galeria en ENTREGADOS */
-.timeline-gallery {
-  padding: 60px 20px;
-  background-color: #fff;
+/* ================================
+   GALERÍA ENTREGADOS FINAL
+   ================================ */
+
+   body.page-entregados .timeline-gallery {
+    padding: 120px 60px 60px;
+    background-color: #f5f7fb;
+  }
+  
+  /* Año como etiqueta flotante */
+  .year-label {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    color: #004aad;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* GRID fluido */
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  /* Tarjeta */
+  .project-card {
+    position: relative;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Hover texto */
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.521);
+    color: white;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-card:hover .card-overlay {
+    opacity: 1;
+  }
+  
+  .card-overlay p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .card-overlay strong {
+    font-weight: bold;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .project-card {
+      flex: 1 1 calc(33.333% - 20px);
+      max-width: calc(33.333% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-card {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-card {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  
+/* ================================
+   HERO ENTREGADOS
+   ================================ */
+   .hero-entregados {
+    position: relative;
+    background: url('assets/images/hero-entregados.jpg') center center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px; /* Compensa navbar fijo */
+  }
+  
+  .hero-entregados .hero-overlay {
+    background-color: rgba(31, 94, 153, 0.589); /* Trama oscura encima de la imagen */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-entregados .container {
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-entregados h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff
+  }
+  
+  .hero-entregados p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff
+  }
+  .hero-entregados {
+  position: relative;
+  background-image: url('/assets/images/hero-entregados.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 320px; /* Puedes ajustar este valor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
-.timeline-gallery .year-block {
-  margin-bottom: 60px;
+.hero-entregados .hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece para dar contraste */
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.timeline-gallery h2 {
+.hero-entregados h1 {
   font-size: 32px;
   font-weight: 700;
-  color: #004aad;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #004aad;
-  display: inline-block;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.project-card {
-  flex: 1 1 calc(25% - 20px); /* 4 columnas */
-  min-width: 250px;
-  background: #f7f7f7;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.03);
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-body.page-entregados .gallery-wrapper {
-  padding-top: 140px; /* Ajusta según el alto real de topbar + navbar */
+.hero-entregados p {
+  font-size: 16px;
+  max-width: 700px;
 }
