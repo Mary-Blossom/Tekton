@@ -1045,7 +1045,7 @@ img {
   background: transparent;
   font-size: 20px;
   font-size: 1.33333rem;
-  color: #265aa6
+  color: #265aa6;
   outline:#000;
   position: absolute;
   right: 10px;
@@ -7301,7 +7301,7 @@ select {
 /* Ajuste solo para la sección de nosotros en esta página */
 .tekton-section {
   position: relative;
-  background: url(./assets/images/slider/nosotros.jpg) center center/cover no-repeat;
+  background: url(/assets/images/slider/nosotros.jpg) center center/cover no-repeat;
   color: #fff;
   padding: 100px 20px;
   text-align: center;
@@ -7324,7 +7324,7 @@ select {
 /* Ajuste solo para la sección de ENTREGADOS en esta página */
 .entregados-section {
   position: relative;
-  background: url(./assets/images/slider/entregado1.jpg) center center/cover no-repeat;
+  background: url(/assets/images/slider/entregado1.jpg) center center/cover no-repeat;
   padding: 100px 20px;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -7492,7 +7492,7 @@ select {
   }
   .hero-entregados {
   position: relative;
-  background-image: url(./assets/images/hero-entregados1.jpg);
+  background-image: url(/assets/images/slider/heroentregados.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
