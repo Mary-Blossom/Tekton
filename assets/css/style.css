@@ -7301,7 +7301,6 @@ select {
 /* Ajuste solo para la sección de nosotros en esta página */
 .tekton-section {
   position: relative;
-  background: url(/assets/images/slider/nosotros.jpg) center center/cover no-repeat;
   color: #fff;
   padding: 100px 20px;
   text-align: center;
@@ -7312,7 +7311,7 @@ select {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(22, 36, 228, 0.308); /* oscurece */
+  background-color: rgba(10, 19, 156, 0.418); /* oscurece */
   z-index: 1;
 }
 
@@ -7324,7 +7323,6 @@ select {
 /* Ajuste solo para la sección de ENTREGADOS en esta página */
 .entregados-section {
   position: relative;
-  background: url(/assets/images/slider/entregado1.jpg) center center/cover no-repeat;
   padding: 100px 20px;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -7336,7 +7334,7 @@ select {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(22, 36, 228, 0.308); /* oscurece el fondo */
+  background-color: rgba(10, 19, 156, 0.418); /* oscurece el fondo */
   z-index: 1;
 }
 
