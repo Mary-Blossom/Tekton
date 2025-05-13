@@ -7324,7 +7324,7 @@ select {
 /* Ajuste solo para la sección de ENTREGADOS en esta página */
 .entregados-section {
   position: relative;
-  background: url(/assets/images/slider/entregados1.JPG) center center/cover no-repeat;
+  background: url(/assets/images/slider/entregados1.jpg) center center/cover no-repeat;
   padding: 100px 20px;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -7462,16 +7462,7 @@ select {
 /* ================================
    HERO ENTREGADOS
    ================================ */
-   .hero-entregados {
-    position: relative;
-    background: url('/assets/images/slider/entregados.JPG') center center/cover no-repeat;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 90px; /* Compensa navbar fijo */
-  }
-  
+
   .hero-entregados .hero-overlay {
     background-color: rgba(31, 94, 153, 0.589); /* Trama oscura encima de la imagen */
     width: 100%;
@@ -7501,7 +7492,7 @@ select {
   }
   .hero-entregados {
   position: relative;
-  background-image: url('/assets/images/hero-entregados.jpg');
+  background-image: url('/assets/images/hero-entregados.JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
