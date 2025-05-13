@@ -1046,7 +1046,7 @@ img {
   font-size: 20px;
   font-size: 1.33333rem;
   color: #265aa6
-  outline:0;
+  outline:#000;
   position: absolute;
   right: 10px;
   top: 55%;
