@@ -7324,7 +7324,7 @@ select {
 /* Ajuste solo para la sección de ENTREGADOS en esta página */
 .entregados-section {
   position: relative;
-  background: url(./assets/images/slider/entregados1.jpg) center center/cover no-repeat;
+  background: url(./assets/images/slider/entregado1.jpg) center center/cover no-repeat;
   padding: 100px 20px;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -7492,7 +7492,7 @@ select {
   }
   .hero-entregados {
   position: relative;
-  background-image: url(./assets/images/hero-entregados.jpg);
+  background-image: url(./assets/images/hero-entregados1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
